@@ -1,0 +1,8 @@
+Algoritmo multiplos_de_3
+	
+	Definir n Como Entero
+	
+	Para n <-0 Hasta 30 Con Paso 3 Hacer
+		Escribir n
+	Fin Para
+FinAlgoritmo
