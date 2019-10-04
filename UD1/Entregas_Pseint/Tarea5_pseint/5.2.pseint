@@ -1,0 +1,31 @@
+Algoritmo dias_semana_si
+	
+	Escribir "Introduzca un número del 1 al 7 para indicar el día de la semana"
+	Leer n
+	
+	Si n = 1 Entonces
+		Escribir "El día introducido es lunes"
+	FinSi
+	Si n = 2 Entonces
+		Escribir "El día introducido es martes"
+	FinSi
+	Si n = 3 Entonces
+		Escribir "El día introducido es mircoles"
+	FinSi
+	Si n = 4 Entonces
+		Escribir "El día introducido es jueves"
+	FinSi
+	Si n = 5 Entonces
+		Escribir "El número introducido es viernes" 
+	FinSi
+	Si n = 6 Entonces
+		Escribir "El número introducido es sábado"
+	FinSi
+	Si n = 7 Entonces
+		Escribir "El número introducido es domingo"
+	FinSi
+	Si n < 1 o n > 7 Entonces 
+		Escribir "El número debe ser entre 1 y 7!"
+	FinSi
+	
+FinAlgoritmo

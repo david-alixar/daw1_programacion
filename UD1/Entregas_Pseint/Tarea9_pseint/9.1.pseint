@@ -1,0 +1,24 @@
+Algoritmo Matriz_num_mes
+	
+	Definir numero_dias_mes como entero
+	
+	Dimension numero_dias_mes[12]
+	numero_dias_mes[1]<-31
+	numero_dias_mes[2]<-28
+	numero_dias_mes[3]<-31
+	numero_dias_mes[4]<-30
+	numero_dias_mes[5]<-31
+	numero_dias_mes[6]<-30
+	numero_dias_mes[7]<-31
+	numero_dias_mes[8]<-31
+	numero_dias_mes[9]<-30
+	numero_dias_mes[10]<-31
+	numero_dias_mes[11]<-30
+	numero_dias_mes[12]<-31
+	
+	Escribir "Introduzca numero de mes"
+	Leer numero_mes
+	Escribir "El numero es" " " numero_mes " " "y posee" " ", numero_dias_mes[numero_mes] " " "dias"
+
+	
+FinAlgoritmo

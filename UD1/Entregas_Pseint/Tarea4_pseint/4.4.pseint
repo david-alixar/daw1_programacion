@@ -1,0 +1,20 @@
+Algoritmo cuantos_positivos
+	
+	Escribir "Introduzca dos números"
+	Leer n1, n2
+	
+	Si n1 > 0 o n2 > 0 Entonces 
+		num_positivos<- 1
+	FinSi
+	
+	Si n1 > 0 y n2 > 0 Entonces
+		num_positivos<- 2
+	FinSi
+	
+	Si n1 < 0 y n2 < 0 Entonces
+		num_positivos<- 0
+	FinSi
+	
+	Escribir "Se han escrito" " " num_positivos " " "números positivos"
+	
+FinAlgoritmo

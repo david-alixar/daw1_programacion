@@ -1,0 +1,17 @@
+Algoritmo contar_palabras_en_frase
+	
+	Escribir "Introduzca una frase y se dirá cuántas palabras hay" 
+	Escribir "IMPORTANTE: NO INTRODUCIR MÁS ESPACIOS DE LOS NECESARIOS"
+	
+	leer frase
+	espacios<- 1
+	
+	para i<-1 hasta longitud(frase) con paso 1 hacer
+		si subcadena(frase,i,i) = " " Entonces
+			espacios<- espacios + 1
+		FinSi
+	FinPara
+	
+	escribir "Nº de palabras: " espacios
+	
+FinAlgoritmo

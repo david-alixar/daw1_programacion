@@ -1,0 +1,11 @@
+Algoritmo sin_titulo
+	
+	Escribir "Introduzca dos números"
+	Leer n1, n2
+	
+	Si n2 <> 0 Entonces
+		Escribir "La división es" " " n1 / n2
+	SiNo
+		Escribir "El segundo número no puede ser 0!"
+	FinSi
+FinAlgoritmo

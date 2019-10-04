@@ -1,0 +1,21 @@
+Algoritmo nombre_alternando_mayusculas
+	
+	Escribir "Introduzca su nombre, alternando mayúsculas y minúsculas (CarLoS)"
+	
+	leer nom
+	
+	Escribir "El nombre introducido alternando las mayúsculas a la inversa es:"
+	
+	para i<-1 hasta longitud(nom) con paso 1 hacer
+		nom_alternado<- subcadena(nom,i,i)
+		Si nom_alternado = Mayusculas(nom_alternado) Entonces
+			Escribir Sin Saltar Minusculas(nom_alternado)
+		SiNo
+			Escribir Sin Saltar Mayusculas(nom_alternado)
+		FinSi
+		
+	FinPara
+	
+	Escribir " "
+	
+FinAlgoritmo

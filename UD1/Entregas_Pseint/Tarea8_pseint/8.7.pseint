@@ -1,0 +1,15 @@
+Algoritmo cuadrado
+	
+	Escribir "Introduzca el tamaño de lado del cuadrado"
+	
+	Leer lado
+	
+	Para fila<- 1 Hasta lado Hacer
+		
+		Para columna<-1 Hasta lado Hacer
+			Escribir sin saltar "*"
+		FinPara
+		
+		Escribir ""
+	FinPara
+FinAlgoritmo

@@ -1,0 +1,26 @@
+Algoritmo dias_semana_segun
+	
+	Escribir "Introduzca un número del 1 al 7 para indicar el día de la semana"
+	Leer n
+	
+	Segun n Hacer
+		1:
+			Escribir "El día introducido es lunes"
+		2:
+			Escribir "El día introducido es martes"
+		3:
+			Escribir "El día introducido es mircoles"
+		4:
+			Escribir "El día introducido es jueves"
+		5:
+			Escribir "El número introducido es viernes"  
+		6:
+			Escribir "El número introducido es sábado"
+		7:
+			Escribir "El número introducido es domingo"
+			
+		De Otro Modo:
+			Escribir "El número debe ser entre 1 y 7 y sin decimales!"
+	FinSegun
+	
+FinAlgoritmo

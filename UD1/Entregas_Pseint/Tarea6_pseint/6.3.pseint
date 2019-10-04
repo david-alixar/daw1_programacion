@@ -1,8 +1,8 @@
 Algoritmo Suma_dos_numeros_al_azar
 	Definir num1 como entero 
 	Definir num2 Como Entero
-	num1 <- azar (100)
-	num2 <- azar (100)
+	num1 <- azar (101)
+	num2 <- azar (101)
 	Escribir "Sume los valores siguientes:" " " num1 " y " num2
 	Definir resultado Como Entero
 	Leer resultado

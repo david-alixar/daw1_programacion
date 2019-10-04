@@ -1,0 +1,15 @@
+Algoritmo num_iguales
+	
+	Definir n1, n2 como entero
+	Escribir "Introduzca un número"
+	Leer n1
+	Escribir "Introduzca otro número"
+	Leer n2
+	
+	Si n1 = n2 Entonces
+		Escribir "Los números son iguales"
+	SiNo
+		Escribir "Los números no son iguales"
+	FinSi
+	
+FinAlgoritmo

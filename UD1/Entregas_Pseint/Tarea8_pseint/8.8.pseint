@@ -1,0 +1,16 @@
+Algoritmo triangulo
+	
+	Definir base, j, k como entero
+	Escribir "Introduzca el valor de la base del triángulo"
+	Leer base
+	
+	Para i<-1 Hasta base con paso 1 Hacer
+		Para j<-1 hasta base-i con paso 1 Hacer
+			Escribir Sin Saltar ""
+		FinPara
+		Para k<-1 hasta i con paso 1 Hacer
+			Escribir Sin Saltar "*"
+		FinPara
+		Escribir " "
+	FinPara
+FinAlgoritmo

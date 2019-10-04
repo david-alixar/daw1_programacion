@@ -1,0 +1,24 @@
+Algoritmo matriz_7_num_y_mayor_de_ellos	
+	Escribir "Introduzca 7 números enteros ininterrumpidamente"
+	
+	Dimension m[7]
+	
+	Para i<- 1 Hasta 7 Con Paso 1 Hacer
+		Leer m[i]
+	FinPara
+	
+	Definir may Como Entero
+	
+	may <- m[1]
+	
+	Para j<- 2 Hasta 7 Con paso 1 Hacer
+		
+		Si m[j] > may
+			may<- m[j]
+		FinSi
+		
+	FinPara
+	
+	Escribir "El número mayor de los intruducidos previamente es" " " may
+	
+FinAlgoritmo

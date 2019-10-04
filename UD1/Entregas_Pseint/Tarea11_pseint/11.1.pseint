@@ -1,0 +1,31 @@
+Algoritmo adivina_numero
+	
+	Definir n, num_usuario, intento como entero
+	
+	n<- azar[101]
+	
+	Escribir "Adivine el número (entre 0 y 100)"
+	
+	Leer num_usuario
+	
+	intento <- 7
+	
+	Mientras num_usuario <> n y intento >1 Hacer 
+		Si num_usuario < n y intento >1
+			intento <- intento - 1
+			Escribir "No ha acertado, el número es mayor. Intentos: " intento 
+			Leer num_usuario
+		Finsi	
+		Si num_usuario > n y intento >1
+			intento <- intento - 1
+			Escribir "No ha acertado, el número es menor. Intentos: " intento
+			Leer num_usuario
+		Finsi	
+	FinMientras
+	
+	Si num_usuario = n 
+		Escribir "Enhorabuena, ha acertado! El número era " num_usuario
+	Sino	
+		Escribir "Lo siento, se han terminado los intentos, el número era " n
+	FinSi
+FinAlgoritmo

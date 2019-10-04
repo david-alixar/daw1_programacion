@@ -1,0 +1,22 @@
+Funcion EsPar(k)
+	
+	Definir resultado Como Logico
+	Si k%2=0 Entonces
+		resultado <- Verdadero
+	SiNo
+		resultado <- Falso
+	FinSi
+
+	Escribir resultado
+	
+FinFuncion
+
+
+Algoritmo num_pares
+	
+	Escribir "Introduzca un número y se dirá si es o no par"
+	Leer k
+	Escribir "Su número es par?"
+	EsPar(k)
+	
+FinAlgoritmo

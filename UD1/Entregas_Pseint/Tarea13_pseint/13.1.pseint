@@ -1,0 +1,18 @@
+Funcion centrar(cad)	
+	
+	Para i<-0 hasta (40 - (Longitud(cad)/2)) Hacer
+		Escribir sin saltar " "
+	FinPara
+	
+	Escribir cad
+
+FinFuncion
+
+Algoritmo EscribirCentrado
+	
+	Leer texto1
+	Leer texto2
+	
+	centrar(texto1)
+	centrar(texto2)
+FinAlgoritmo

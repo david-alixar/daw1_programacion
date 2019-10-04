@@ -1,0 +1,36 @@
+Algoritmo dos_bloques
+	
+	Dimension m[2,10]
+	
+	Escribir "Introduzca dos bloques de 10 números cada uno (20 números en total)"
+	
+	Para i<- 1 Hasta 2 Con Paso 1 Hacer
+		Para j<- 1 Hasta 10 Con Paso 1 Hacer
+			Leer m[i,j]
+		FinPara
+	FinPara
+	
+	may1 <- 0
+	may2 <- 0
+
+	Para k<- 1 Hasta 1 Con Paso 1 Hacer
+		Para l<- 1 Hasta 10 Con Paso 1 Hacer
+			Si m[k,l] > may1 Entonces
+				may1 <- m[k,l]				
+			FinSi
+		FinPara
+	FinPara
+	
+	Para n<- 2 Hasta 2 Con Paso 1 Hacer
+		Para b<- 1 Hasta 10 Con Paso 1 Hacer
+			Si m[n,b] > may2 Entonces
+				may2 <- m[n,b]				
+			FinSi
+		FinPara
+	FinPara
+	
+	Escribir "El número mayor del primer bloque es: " may1
+	Escribir "El número mayor del segundo bloque es: " may2
+	
+	
+FinAlgoritmo

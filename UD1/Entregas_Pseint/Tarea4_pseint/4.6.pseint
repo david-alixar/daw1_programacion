@@ -1,0 +1,17 @@
+Algoritmo mayor_de_tres
+	
+	Escribir "Introduzca 3 números seguidos"
+	Leer n1, n2, n3
+	
+	Si n1 > n2 Entonces
+		may<- n1
+	SiNo
+		may<- n2
+	FinSi
+	Si n3 > may Entonces
+		may<- n3
+	FinSi
+	
+	Escribir "El número mayor es" " " may
+	
+FinAlgoritmo

@@ -1,0 +1,22 @@
+Algoritmo calcular_raiz_cuadrada
+	
+	Escribir "Introduzca un número para conocer su raíz cuadrada. 0 para salir"
+	
+	Leer n
+	
+	Mientras n <> 0 Hacer
+		
+		Mientras n < 0
+			Escribir "El número no puede ser negativo, introduzca otro"
+			Leer n
+		FinMientras
+		
+		resultado<- rc (n)
+		Escribir "La raíz cuadrada de " n " es " resultado
+		Leer n
+		
+	Fin mientras
+	
+	
+	
+FinAlgoritmo

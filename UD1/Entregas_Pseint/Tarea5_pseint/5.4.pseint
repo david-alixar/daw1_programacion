@@ -1,0 +1,45 @@
+Algoritmo meses_si
+	
+	Escribir "Introduzca un número del 1 al 12 para indicar el mes"
+	Leer n
+	
+	Si n = 1 Entonces
+		Escribir "El mes es enero"
+	FinSi
+	Si n = 2 Entonces
+		Escribir "El mes es febrero"
+	FinSi
+	Si n = 3 Entonces
+		Escribir "El mes es marzo"
+	FinSi
+	Si n = 4 Entonces
+		Escribir "El mes es abril"
+	FinSi
+	Si n = 5 Entonces
+		Escribir "El mes es mayo"
+	FinSi
+	Si n = 6 Entonces
+		Escribir "El mes es junio"
+	FinSi
+	Si n = 7 Entonces
+		Escribir "El mes es julio"
+	FinSi
+	Si n = 8 Entonces
+		Escribir "El mes es agosto"
+	FinSi
+	Si n= 9 Entonces
+		Escribir "El mes es septiembre"
+	FinSi
+	Si n = 10 Entonces
+		Escribir "El mes es octubre"
+	FinSi
+	Si n = 11 Entonces
+		Escribir "El mes es noviembre"
+	FinSi
+	Si n = 12 Entonces
+		Escribir "El mes es diciembre"
+	FinSi
+	Si n < 0 o n > 12 o n <> Entero Entonces
+		Escribir "El número debe ser entre 1 y 12 y sin decimales!"
+	FinSi
+FinAlgoritmo

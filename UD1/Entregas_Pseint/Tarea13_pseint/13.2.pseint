@@ -1,0 +1,30 @@
+Funcion multiplos(x,k)
+	 
+	
+	Si x > k Entonces
+		Si x MOD k=0 Entonces
+			Escribir "El número " x " es multiplo de " k
+		SiNo
+			Escribir "El número " x " no es múltiplo de " k
+		FinSi
+	SiNo
+		Si k MOD x = 0 Entonces
+			Escribir "El número " k " es múltiplo de " x
+		SiNo
+			Escribir "El número " k " no es múltiplo de " x
+		FinSi
+	FinSi
+	
+	
+FinFuncion
+
+
+Algoritmo calcular_multiplo
+	
+	Escribir "Introduzca dos numeros"
+	Leer x
+	Leer k
+	
+	multiplos(x,k)
+	
+FinAlgoritmo

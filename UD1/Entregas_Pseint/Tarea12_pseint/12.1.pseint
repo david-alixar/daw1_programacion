@@ -1,0 +1,15 @@
+Algoritmo sin_titulo
+	
+	Dimension letras[100]
+	k<- 0
+	leer palabra
+	cantidad <- longitud(palabra)
+	
+	para i<- 1 hasta cantidad con paso 1 Hacer
+		letras[cantidad-k]<-SUBCADENA(palabra,i,i)
+		k<- k+1
+	FinPara
+	para i<- 1 hasta cantidad con paso 1 Hacer
+		Escribir sin saltar letras[i]
+	FinPara
+FinAlgoritmo
