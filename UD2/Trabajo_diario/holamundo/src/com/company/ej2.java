@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Main {
+public class ej2 {
 
     public static void main(String[] args) {
         // write yoSur code here
@@ -11,8 +11,9 @@ public class Main {
         System.out.print("Intruduzca en primer número");
         int primerNumero = teclado.nextInt();
 
+        int a = (int) 2.6;
+        System.out.print(a);
 
-        System.out.print("el resto es :");
-        System.out.print(primerNumero * 9 + 32 / 5);
+
     }
 }
