@@ -12,7 +12,7 @@ public class ej2 {
         int primerNumero = teclado.nextInt();
 
         int a = (int) 2.6;
-        System.out.print(a);
+        System.out.print("El valor de" + a + "es: ");
 
 
     }
