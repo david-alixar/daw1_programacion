@@ -7,13 +7,13 @@ public class ej3 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.print("Introduzca su año de nacimiento ");
-        short primerNumero = teclado.nextShort();
-        System.out.print("Introduzca el año actual ");
-        short segundoNumero = teclado.nextShort();
+        System.out.print("Introduzca un número entero ");
+        double primerNumero = teclado.nextDouble();
+        System.out.print("Introduzca otro número entero ");
+        double segundoNumero = teclado.nextDouble();
 
 
-        System.out.print("Usted nació en " + primerNumero + " y en " + segundoNumero + " su edad es: ");
-        System.out.print( segundoNumero - primerNumero);
+        System.out.print(primerNumero + " entre " + segundoNumero + " es: ");
+        System.out.print( primerNumero / segundoNumero);
     }
 }
