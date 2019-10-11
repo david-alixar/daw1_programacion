@@ -8,14 +8,12 @@ public class ej1 {
 
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduzca un número entero ");
-        int primerNumero = teclado.nextInt();
+        double primerNumero = teclado.nextDouble();
+        System.out.print("Introduzca otro número entero ");
+        double segundoNumero = teclado.nextDouble();
 
-        if (primerNumero >= 0){
-            System.out.println( "El número introducido es positivo");
-        }
-        else {
-            System.out.println("El número introducido es negativo");
-        }
 
+        System.out.print(primerNumero + " entre " + segundoNumero + " es: ");
+        System.out.print( primerNumero / segundoNumero);
     }
 }

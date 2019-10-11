@@ -7,15 +7,15 @@ public class ej2 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.print("Introduzca el número 12 ");
-        int primerNumero = teclado.nextInt();
+        System.out.print("Introduzca la primera nota sin decimales ");
+        byte primerNumero = teclado.nextByte();
+        System.out.print("Introduzca la segunda nota sin decimales ");
+        byte segundoNumero = teclado.nextByte();
+        float suma = (primerNumero + segundoNumero);
+        float resultado = (suma /2);
 
-        if (primerNumero == 12){
-            System.out.println("Ha introducido el número correctamente");
-        }
-        else {
-            System.out.println("No ha introducido el número correctamente");
-        }
 
+        System.out.print( "La media  aritmética de " + primerNumero + " y " + segundoNumero + " es: ");
+        System.out.print (resultado);
     }
 }

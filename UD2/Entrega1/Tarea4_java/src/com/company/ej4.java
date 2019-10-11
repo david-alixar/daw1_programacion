@@ -7,27 +7,11 @@ public class ej4 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.print("Introduzca un número ");
-        int primerNumero = teclado.nextInt();
-        System.out.print("Introduzca otro número ");
-        int segundoNumero = teclado.nextInt();
-        int num_pares1 = 0;
-        int num_pares2 = 0;
+        System.out.print("Introduzca un número con decimales para redondearlo ");
+        float primerNumero = teclado.nextFloat();
 
 
-        if ((primerNumero % 2) == 0) {
-            num_pares1 = (num_pares1 + 1);
-        }
-
-        if ((segundoNumero % 2) == 0) {
-            num_pares2 = (num_pares2 + 1);
-        }
-
-
-        int num_pares = (num_pares1 + num_pares2);
-
-        System.out.print(" La cantidad de números pares introducidos es: " + num_pares);
-        }
-
-
+        System.out.print( "Su número redondeado es: ");
+        System.out.print (Math.round(primerNumero));
     }
+}

@@ -7,15 +7,13 @@ public class ej2 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.print("Introduzca la primera nota sin decimales ");
-        byte primerNumero = teclado.nextByte();
-        System.out.print("Introduzca la segunda nota sin decimales ");
-        byte segundoNumero = teclado.nextByte();
-        float suma = (primerNumero + segundoNumero);
-        float resultado = (suma /2);
+        System.out.print("Introduzca su año de nacimiento ");
+        short primerNumero = teclado.nextShort();
+        System.out.print("Introduzca el año actual ");
+        short segundoNumero = teclado.nextShort();
 
 
-        System.out.print( "La media  aritmética de " + primerNumero + " y " + segundoNumero + " es: ");
-        System.out.print (resultado);
+        System.out.print("Usted nació en " + primerNumero + " y en " + segundoNumero + " su edad es: ");
+        System.out.print( segundoNumero - primerNumero);
     }
 }
