@@ -8,7 +8,7 @@ public class ej1 {
 
         Scanner teclado = new Scanner(System.in);
         System.out.print(" Introduzca un número para saber si es par, si es positivo y su cuadrado. 0 para salir. ");
-        byte primerNumero = teclado.nextByte();
+        int primerNumero = teclado.nextInt();
 
         while (primerNumero != 0) {
 
@@ -25,7 +25,7 @@ public class ej1 {
             System.out.println("El cuadrado del número introducido es:" + (primerNumero * primerNumero));
 
             System.out.print(" Introduzca otro número. 0 para salir. ");
-            primerNumero = (teclado.nextByte());
+            primerNumero = (teclado.nextInt());
 
         }
 

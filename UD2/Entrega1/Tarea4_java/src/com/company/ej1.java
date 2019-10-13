@@ -1,19 +1,19 @@
 package com.company;
 
-import java.util.Scanner;
 
 public class ej1 {
 
     public static void main(String[] args) {
 
-        Scanner teclado = new Scanner(System.in);
-        System.out.print("Introduzca un número entero ");
-        double primerNumero = teclado.nextDouble();
-        System.out.print("Introduzca otro número entero ");
-        double segundoNumero = teclado.nextDouble();
+        System.out.println(" Aquí mostraremos una variable de tipo short con el máximo valor posible: ");
+        short num = 32767;
+        System.out.println(num);
 
+        System.out.println(" Ahora mostraremos qué ocurre al incrementar en 1 el valor dado a la variale: ");
 
-        System.out.print(primerNumero + " entre " + segundoNumero + " es: ");
-        System.out.print( primerNumero / segundoNumero);
+        num++;
+
+        System.out.println(num);
+
     }
 }

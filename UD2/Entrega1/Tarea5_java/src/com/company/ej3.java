@@ -15,7 +15,7 @@ public class ej3 {
             System.out.println( "El número introducido es impar");
         }
         else {
-            System.out.println("El número introducido no es impar");
+            System.out.println("El número introducido NO es impar");
         }
 
     }
