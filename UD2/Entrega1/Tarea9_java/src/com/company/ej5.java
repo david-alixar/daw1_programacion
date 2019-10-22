@@ -12,7 +12,7 @@ public class ej5 {
         String cadena1 = teclado.nextLine();
 
         String muletilla_inicio = "Javalín,javalón";
-        String muletilla_final = "Javalén,len,len"; //15
+        String muletilla_final = "Javalén,len,len";
 
 
         int longitud_muletilla2 = muletilla_final.length();
