@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class ej5 {
+public class ej6 {
 
     public static void main(String[] args) {
 
@@ -17,13 +17,18 @@ public class ej5 {
         String cadena;
         cadena = teclado.next();
 
-       for (i= 0; i<= altura; i++) {
-            for (j= altura - i; j> 0; j--) {
-                System.out.print(" ");
+        for (i= 0; i<=altura; i++) {
+            for (j= 0; j<= altura - i; j++) {
+                if (j== altura || i== altura) {
+                    System.out.print("*");
+                }
+                else {
+                    System.out.print(" ");
+                }
+
+                System.out.println("");
             }
-            for (j= 0; j< i; j++) {
-                System.out.print(" " +cadena);            }
-            System.out.println("");
         }
+
     }
 }
