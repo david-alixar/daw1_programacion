@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class ej4 {
+public class ej11 {
 
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class ej4 {
         else {
             for (i = 0; i < altura; i++) {
                 for (j= 0; j< altura; j++) {
-                    if (j == i - (altura/2) || j== (altura/2) -i) {
+                    if (j == i - altura || j== altura -i) {
                         System.out.print("*");
                     } else {
                         System.out.print(" ");

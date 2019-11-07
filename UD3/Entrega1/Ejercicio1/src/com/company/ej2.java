@@ -23,15 +23,15 @@ public class ej2 {
         if (n1 < n2) {
             System.out.println("Los números comprendidos entre los dos introducidos son: ");
             for (int i = n1; i < n2; i++) {
-                System.out.println(n1 + 1);
                 n1++;
+                System.out.println(n1);
             }
         }
         if (n1 > n2) {
             System.out.println("Los números comprendidos entre los dos introducidos son: ");
             for (int i = n1; i > n2; i--) {
-                System.out.println(n1 - 1);
                 n1--;
+                System.out.println(n1);
             }
         }
 
