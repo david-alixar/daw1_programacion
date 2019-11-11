@@ -12,8 +12,6 @@ public class ej5 {
         int n2 = teclado.nextInt();
         int n3 = teclado.nextInt();
 
-
-
         teclado.close();
 
        if  (mayor(n1,n2) >= n3) {
@@ -30,7 +28,5 @@ public class ej5 {
         else {
             return n2;
         }
-
-
     }
 }

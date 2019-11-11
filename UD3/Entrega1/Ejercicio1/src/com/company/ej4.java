@@ -15,7 +15,7 @@ public class ej4 {
 
         teclado.close();
 
-        System.out.println("El mayor de los número es: " + mayor(n1,n2));
+        System.out.println("El mayor de los números es: " + mayor(n1,n2));
     }
     public static int mayor(int n1, int n2) {
         if (n1 >= n2) {

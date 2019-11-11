@@ -17,7 +17,7 @@ public class ej6 {
 
     public static void vocal(String caracter) {
         boolean es_vocal;
-        if (caracter.equals ("a")|| caracter.equals ("e") || caracter.equals ("i") || caracter.equals ("o") || caracter.equals ("u")) {
+        if (caracter.equalsIgnoreCase ("a")|| caracter.equalsIgnoreCase ("e") || caracter.equalsIgnoreCase ("i") || caracter.equalsIgnoreCase ("o") || caracter.equalsIgnoreCase ("u")) {
             es_vocal = true;
         }
         else {

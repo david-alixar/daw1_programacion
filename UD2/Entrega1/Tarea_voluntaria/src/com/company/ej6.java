@@ -13,21 +13,24 @@ public class ej6 {
         int i;
         int j;
         System.out.println("Introduzca un caracter para construir la pirámide:");
-
         String cadena;
         cadena = teclado.next();
-
-        for (i= 0; i<=altura; i++) {
-            for (j= 0; j<= altura - i; j++) {
-                if (j== altura || i== altura) {
-                    System.out.print("*");
-                }
-                else {
+        for (i = 0; i < altura; i++) {
+            for (j = altura-1; j >= 0; j--) {
+                if (j == i || i >= altura - 1) {
+                    System.out.print(" " + cadena);
+                } else {
                     System.out.print(" ");
                 }
-
-                System.out.println("");
             }
+            for (j = 0; j <= altura; j++) {
+                if (j == i -1) {
+                    System.out.print(cadena + " ");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
         }
 
     }
