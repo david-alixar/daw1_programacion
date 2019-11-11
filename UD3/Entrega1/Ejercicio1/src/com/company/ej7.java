@@ -14,7 +14,7 @@ public class ej7 {
     }
 
     public static void primo(int n) {
-        int contador = 1;
+        int contador = 2;
         boolean primo = true;
 
         while (contador != n-1) {
