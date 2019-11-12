@@ -16,13 +16,27 @@ public class ej8 {
     public static int primos2(int n) {
         int div_primos = 0;
 
-        for (int i = 2; i <= n; i++) {
-            for (int j = 2; j <= i -1; j++)
-                if (i % j == 0) {
-                    div_primos++;
-                    break;
+        // Comprobamos todos los divisores de n
+        for (int i = 1; i <= n; i++) {
+
+            System.out.println("i= " + i + " n= "+ n);
+            // Si encontramos un divisor...
+            if (i % n == 0) {
+                boolean es_primo = true;
+                System.out.println("Es divisor el " + i);
+
+                // ... vamos a comprobar si es primo
+                for (int j = 2; j < i; j++) {
+                    if (j % i == 0) {
+                        es_primo = false;
+                        break;
+                    }
                 }
+                if (es_primo) div_primos++;
+            }
         }
+
         return div_primos;
     }
+
 }
