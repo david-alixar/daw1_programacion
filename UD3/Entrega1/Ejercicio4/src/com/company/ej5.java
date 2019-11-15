@@ -36,31 +36,30 @@ public class ej5 {
     int j = 0;
     int k = 0;
 
-    while (k < n2) {
+    while (i < n && j < n) {
       if (variable1[i] <= variable2[j]) {
         variable3[k] = variable1[i];
         System.out.println("Insertando de variable1. i=" + i + " valor=" + variable1[i]);
-        if (i < n - 1) i++;
+        i++;
       } else {
         variable3[k] = variable2[j];
         System.out.println("Insertando de variable2. j=" + j + " valor=" + variable2[j]);
-        if (j < n - 1) j++;
+        j++;
       }
       k++;
     }
 
-    //        for (int i=0; i<n -1; i++) {
-    //            if (variable1[i] <= variable2[i]) {
-    //                variable3[i] = variable1[i];
-    //            }
-    //            else {
-    //                variable3[i] = variable2[i];
-    //            }
-    //        }
-
-    //        for (i=0; i<12; i++) {
-    //            System.out.println(variable3[i]);
-    //        }
+    if (i == n) {
+      for (int l = j; l < variable2.length; l++) {
+        variable3[k] = variable2[j];
+        k++;
+      }
+    } else {
+      for (int l = i; l < variable1.length; l++) {
+        variable3[k] = variable1[i];
+        k++;
+      }
+    }
 
     System.out.println(Arrays.toString(variable3));
   }

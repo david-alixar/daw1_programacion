@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class ej8 {
+public class ej9 {
 
   public static void main(String[] args) {
 
@@ -10,7 +10,8 @@ public class ej8 {
     System.out.print("Introduzca un valor de n: ");
     int n = teclado.nextInt();
     teclado.nextLine();
-    System.out.println(n + " tiene " + div_primos(n) + " divisores primos");
+    // System.out.println(n + " tiene " + div_primos(n) + " divisores primos");
+    div_primos(n);
     teclado.close();
   }
 
@@ -28,18 +29,16 @@ public class ej8 {
     return primo;
   }
 
-  public static int div_primos(int n) {
-    int div_primos = 0;
+  public static void div_primos(int n) {
 
+    System.out.println("los siguientes números son divisores primos de " + n + ": ");
     // Comprobamos todos los divisores de n
     for (int i = 2; i <= n; i++) {
 
       // Si encontramos un divisor y además es primo...
       if (n % i == 0 && primo(i)) {
-        System.out.println("El número " + i + " es divisor y primo");
-        div_primos++;
+        System.out.println(i);
       }
     }
-    return div_primos;
   }
 }
