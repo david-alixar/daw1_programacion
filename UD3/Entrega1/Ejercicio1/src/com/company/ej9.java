@@ -10,7 +10,6 @@ public class ej9 {
     System.out.print("Introduzca un valor de n: ");
     int n = teclado.nextInt();
     teclado.nextLine();
-    // System.out.println(n + " tiene " + div_primos(n) + " divisores primos");
     div_primos(n);
     teclado.close();
   }

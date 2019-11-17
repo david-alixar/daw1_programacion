@@ -7,19 +7,23 @@ public class ej11 {
   public static void main(String[] args) {
 
     Scanner teclado = new Scanner(System.in);
-    System.out.println("Introduzca un número para conocer su factorial: ");
-    int n1 = teclado.nextInt();
+    System.out.println("Introduzca un número : ");
+    double a = teclado.nextDouble();
+    System.out.println("Introduzca un número entero no negativo : ");
+    int n = teclado.nextInt();
+    int veces = 2;
+    double resultado = a * a;
 
+    while (n < 0) {
+      System.out.println("Error, el número no puede ser negativo. Introduzca otro:");
+      n = teclado.nextInt();
+    }
     teclado.close();
 
-    // System.out.println("El mayor es: " + mayor(n3, mayor(n1, n2)));
+    while (veces < n) {
+      resultado = (a * resultado);
+      veces++;
+    }
+    System.out.println(resultado);
   }
-
-  //  public static int factorial(int n) {
-  //    if (n == 0) {
-  //      return 1;
-  //    } else {
-  //
-  //    }
-  //  }
 }

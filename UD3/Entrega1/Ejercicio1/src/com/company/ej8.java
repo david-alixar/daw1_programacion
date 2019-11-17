@@ -29,7 +29,7 @@ public class ej8 {
   }
 
   public static int div_primos(int n) {
-    int div_primos = 0;
+    int num_div_primos = 0;
 
     // Comprobamos todos los divisores de n
     for (int i = 2; i <= n; i++) {
@@ -37,9 +37,9 @@ public class ej8 {
       // Si encontramos un divisor y además es primo...
       if (n % i == 0 && primo(i)) {
         System.out.println("El número " + i + " es divisor y primo");
-        div_primos++;
+        num_div_primos++;
       }
     }
-    return div_primos;
+    return num_div_primos;
   }
 }
