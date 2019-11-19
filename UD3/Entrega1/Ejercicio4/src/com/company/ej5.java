@@ -51,12 +51,13 @@ public class ej5 {
 
     if (i == n) {
       for (int l = j; l < variable2.length; l++) {
-        variable3[k] = variable2[j];
+        variable3[k] = variable2[l];
         k++;
       }
-    } else {
+    }
+    if (j == n) {
       for (int l = i; l < variable1.length; l++) {
-        variable3[k] = variable1[i];
+        variable3[k] = variable1[l];
         k++;
       }
     }
