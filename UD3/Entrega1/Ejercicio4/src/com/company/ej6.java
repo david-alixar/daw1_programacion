@@ -12,16 +12,17 @@ public class ej6 {
     int cant = teclado.nextInt();
     float[] inicial = new float[cant];
 
-      for (int i = 0; i < inicial.length; i++) {
-          System.out.println("Introduzca un número decimal: ");
-          inicial[i] = teclado.nextFloat();
-      }
-      System.out.println(sin_repetidos(inicial,cant));
+    for (int i = 0; i < inicial.length; i++) {
+      System.out.println("Introduzca un número decimal: ");
+      inicial[i] = teclado.nextFloat();
+    }
+    System.out.println("Los números sin repetir son :");
+    System.out.println(Arrays.toString(sin_repetidos(cant, inicial)));
+  }
 
-    public static float sinrepetidos (float[] inicial = new float[cant];)
-    float[] ordenado = new float[cant];
+  public static float[] sin_repetidos(int cant, float[] inicial) {
+    float[] definitivo = new float[cant];
     int i;
-
 
     int k = 0;
     for (i = 0; i < inicial.length; i++) {
@@ -30,12 +31,11 @@ public class ej6 {
         j++;
       }
       if (j == i) {
-        ordenado[k] = inicial[i];
+        definitivo[k] = inicial[i];
         k++;
       }
     }
 
-    Arrays.copyOf(ordenado, k);
-    System.out.println(Arrays.toString(ordenado));
+    return Arrays.copyOf(definitivo, k);
   }
 }

@@ -9,7 +9,7 @@ public class ej7 {
     Scanner teclado = new Scanner(System.in);
     final short num_alumnos = 5;
     final short num_trim = 3;
-    int notas[][] = new int[3][num_alumnos];
+    int notas[][] = new int[num_trim][num_alumnos];
 
     for (int j = 0; j < num_trim; j++) {
       System.out.println("Introduzca las notas del trimestre " + (j + 1) + ": ");
@@ -29,7 +29,7 @@ public class ej7 {
         sum = notas[i][j] + sum;
       }
       System.out.println(
-          "Las nota media del trimestre " + (i + 1) + " es: " + (double) (sum / num_alumnos));
+          "La nota media del trimestre " + (i + 1) + " es: " + (double) (sum / num_alumnos));
       sum = 0;
     }
     System.out.println(
