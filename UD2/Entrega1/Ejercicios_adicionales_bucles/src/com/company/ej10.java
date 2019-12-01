@@ -7,7 +7,7 @@ public class ej10 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Introduzca la altura de la L:");
+        System.out.println("Introduzca la altura de la U:");
         int altura = teclado.nextInt();
         int i;
         int j;
