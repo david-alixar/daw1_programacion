@@ -1,4 +1,4 @@
-package alixar.u4.t1.a1;
+package alixar.u4.t1.a2;
 
 public class CuentaCorriente {
 
@@ -15,7 +15,15 @@ public class CuentaCorriente {
         dni = DNI;
         limite_descubrimiento = -50;
     }
-
+    CuentaCorriente(double saldo) {
+        this.saldo = saldo;
+        limite_descubrimiento = 0;
+    }
+    CuentaCorriente(double saldo, int limite_descubierto, String DNI) {
+        this.saldo = saldo;
+        dni = DNI;
+        this.limite_descubrimiento = limite_descubierto;
+    }
     boolean sacar_dinero(double peticion) {
         boolean resultado = false;
         if ((saldo - peticion) >= limite_descubrimiento) {
@@ -31,9 +39,9 @@ public class CuentaCorriente {
     }
 
     void ingresar_dinero(double ingreso) {
-saldo += ingreso;
-System.out.println("Se han ingresado " + ingreso + " euros");
-System.out.println("Dispone de un saldo de " + saldo + " euros");
+        saldo += ingreso;
+        System.out.println("Se han ingresado " + ingreso + " euros");
+        System.out.println("Dispone de un saldo de " + saldo + " euros");
     }
 
     void mostrar_informacion() {
