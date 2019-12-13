@@ -10,7 +10,7 @@ public class CuentaCorriente {
 
     // Metodos
     CuentaCorriente(String nombre, String DNI) {
-        saldo = 0;
+        saldo = 100;
         this.nombre = nombre;
         dni = DNI;
         limite_descubrimiento = -50;
