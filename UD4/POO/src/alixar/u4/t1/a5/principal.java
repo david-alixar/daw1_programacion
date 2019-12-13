@@ -11,16 +11,16 @@ public class principal {
         Text b1 = new Text (n, cadena);
         System.out.println("Char:");
         b1.mostrar_informacion();
-//        b1.anadir_al_final_c('j');
-//        b1.mostrar_informacion();
-//        b1.anadir_al_inicio_c('h');
-//        b1.mostrar_informacion();
-//        System.out.println("String:");
-//        b1.mostrar_informacion();
-//        b1.anadir_al_final_s("paco");
-//        b1.mostrar_informacion();
-//        b1.anadir_al_inicio_s("pepe");
-//        b1.mostrar_informacion();
+        b1.anadir_al_final_c('j');
+        b1.mostrar_informacion();
+        b1.anadir_al_inicio_c('h');
+        b1.mostrar_informacion();
+        System.out.println("String:");
+        b1.mostrar_informacion();
+        b1.anadir_al_final_s("paco");
+        b1.mostrar_informacion();
+        b1.anadir_al_inicio_s("pepe");
+        b1.mostrar_informacion();
         System.out.println("La frase contiene " + b1.contar_vocales() + " vocales");
     }
 }
