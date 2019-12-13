@@ -3,11 +3,11 @@ package alixar.u4.t1.a4;
 public class CuentaCorriente {
 
     // Atributos
-    double saldo;
-    int limite_descubrimiento;
-    String nombre;
-    String dni;
-    static String nombre_banco = "Santander";
+    private double saldo;
+    private int limite_descubrimiento;
+    private String nombre;
+    private String dni;
+    private static String nombre_banco = "Santander";
 
     // Metodos
     CuentaCorriente(String nombre, String DNI) {
