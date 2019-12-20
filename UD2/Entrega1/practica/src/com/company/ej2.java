@@ -15,6 +15,7 @@ public class ej2 {
         int pos = 1;
         long num_definitivo = 0;
 
+
         while (num_entero > 0) {
             long resto = num_entero % 10;
             num_invertido = ((num_invertido *10) + resto);

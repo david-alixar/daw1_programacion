@@ -8,7 +8,7 @@ public class Maquinistas {
     private String rango;
 
     // Metodos
-    protected Maquinistas(String nombre, String dni, double sueldo_mensual, String rango) {
+    public Maquinistas(String nombre, String dni, double sueldo_mensual, String rango) {
         this.nombre = nombre;
         this.dni = dni;
         this. sueldo_mensual = sueldo_mensual;
