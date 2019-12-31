@@ -14,7 +14,7 @@ public class principal {
         JefesEstacion je1 = new JefesEstacion("Ignacio Marcos" , "54789632L");
         Locomotoras loc1 = new Locomotoras ("7894 HLV", 6000, 2012,mec1);
         Trenes tren1 = new Trenes (loc1,maq1);
-       // tren1.anadir_vagon(5000, 1200,"patatas");
+        tren1.anadir_vagon(5000, 1200,"patatas");
     }
 
 }
