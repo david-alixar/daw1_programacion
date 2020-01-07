@@ -1,4 +1,4 @@
-package alixar.u4.t3;
+package alixar.u4.t2.a3;
 
 public class principal {
     public static void main(String[] args) {
