@@ -2,11 +2,11 @@ package alixar.u5.t1.a1;
 
 public class Hora {
     // Atributos
-    private int hora;
-    private int minutos;
+    protected int hora;
+    protected int minutos;
 
     // Metodos
-    Hora(int hora, int minutos) {
+    public Hora(int hora, int minutos) {
         if (hora < 24 && minutos < 60) {
             this.hora = hora;
             this.minutos = minutos;
@@ -19,8 +19,8 @@ public class Hora {
         System.out.println("Son las " + hora + ":" + minutos);
     }
 
-    void inc() {
-        if (minutos + 1 < 59) {
+    public void inc() {
+        if (minutos < 59) {
             minutos++;
         } else {
             hora++;
@@ -36,16 +36,18 @@ public class Hora {
         }
     }
 
-    void setHora(int hora) {
+    protected void setHora(int hora) {
         if (hora > 23) {
             System.out.println("La hora introducida no es correcta!");
         } else {
             this.hora = hora;
         }
     }
+    @Override
+    public String toString() {
+        String result = hora + ":" + minutos;
+        return result;
+    }
 
 }
 
-//    @Override
-//    public String toString
-//    }
