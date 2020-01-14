@@ -4,6 +4,7 @@ public class Caja {
 
     //Atributos
 
+    protected String etiqueta;
     protected double ancho;
     protected double alto;
     protected double fondo;
@@ -19,12 +20,21 @@ public class Caja {
     }
 
     public double getVolumen(){
-        if (u==Unidades.cm){
-            ancho = ancho / 100;
-            alto = alto / 100;
-            fondo = fondo / 100;
-        }
         double volumen = ancho * alto * fondo;
+        if (u==Unidades.cm){
+            volumen = (ancho/100) * (alto/100) * (fondo/100);
+        }
         return volumen;
+    }
+
+    public void setEtiqueta(String etiqueta){
+        this.etiqueta = etiqueta;
+    }
+
+
+    @Override
+    public String toString() {
+        String result = ancho + " x " + alto + " x " + fondo + " (" + u + ") Dirección: " + etiqueta;
+        return result;
     }
 }
