@@ -47,16 +47,22 @@ public class Electrodomestico {
         switch (consumo){
             case A:
                 precio_final += 100;
+                break;
             case B:
                 precio_final += 80;
+                break;
             case C:
                 precio_final += 60;
+                break;
             case D:
                 precio_final += 50;
+                break;
             case E:
                 precio_final += 30;
+                break;
             case F:
                 precio_final += 10;
+                break;
         }
         if (peso >= 0 && peso < 29){
             precio_final += 10;
@@ -74,7 +80,7 @@ public class Electrodomestico {
     }
     @Override
     public String toString() {
-        String valor_atributos = "Precio: " + precio_base + "€, color: " + color + ", consumo energético: " + consumo + ", peso:" + peso + "kg,precio final:" + getPrecioFinal() + "€";
+        String valor_atributos = "Precio base: " + precio_base + "€, color: " + color + ", consumo energético: " + consumo + ", peso:" + peso + "kg,precio final:" + getPrecioFinal() + "€";
         return valor_atributos;
     }
 }
