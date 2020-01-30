@@ -15,4 +15,9 @@ public class Circulo implements Figura{
         float area = (float) ((float) (Math.PI * radio) * (Math.PI * radio));
         return area;
     }
+    @Override
+    public String toString(){
+        String datos = "El círculo tiene de radio: " + radio + "cm";
+        return datos;
+    }
 }
