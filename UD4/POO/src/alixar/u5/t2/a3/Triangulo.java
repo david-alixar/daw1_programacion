@@ -1,6 +1,6 @@
 package alixar.u5.t2.a3;
 
-public class Triangulo extends PoligonoRegular implements Figura {
+public class Triangulo extends PoligonoRegular implements Figura, Comparable {
 
     //Atributo
     private float altura;
@@ -20,6 +20,12 @@ public class Triangulo extends PoligonoRegular implements Figura {
     }
 
     //Método
+    public float get_lado() {
+        return lado;
+    }
+    public colores get_color(){
+        return color;
+    }
     @Override
     public float getArea(){
         float area = (lado * altura) / 2;
@@ -27,8 +33,21 @@ public class Triangulo extends PoligonoRegular implements Figura {
     }
     @Override
     public String toString(){
-        String datos = "El triángulo tiene de lado: " + lado + "cm, de altura: " + altura + "cm y es de color: " + color;
+        String datos = "El triángulo tiene de lado: " + lado + "cm, de altura: " + altura + "cm, un área de: " + getArea() + "cm2 y es de color: " + color;
         return datos;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        int resultado = 0;
+        Triangulo nuevoTriangulo = (Triangulo) o;
+        if (this.lado < nuevoTriangulo.get_lado()) {
+            resultado = -1;
+        }
+        else if (lado > nuevoTriangulo.get_lado()){
+            resultado = 1;
+        }
+        return resultado;
     }
 }
 

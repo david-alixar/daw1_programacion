@@ -22,7 +22,7 @@ public class Cuadrado extends PoligonoRegular implements Figura{
     }
     @Override
     public String toString(){
-        String datos = "El cuadrado tiene de lado: " + lado + "cm y es de color: " + color;
+        String datos = "El cuadrado tiene de lado: " + lado + "cm, tiene un área de: " + getArea() + "cm2 y es de color: " + color;
         return datos;
     }
 }
