@@ -26,5 +26,6 @@ public class principal {
         c2.mostrar_conjunto();
         c2.eliminar_del_conjunto(c1);
         c2.mostrar_conjunto();
+        System.out.println(Conjunto.union(c1,c2));
     }
 }
