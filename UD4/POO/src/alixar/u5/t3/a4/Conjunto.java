@@ -85,30 +85,42 @@ public class Conjunto {
     }
  public static boolean incluido (Conjunto c1, Conjunto c2){
         boolean incluido = false;
+        int contador = 0;
         for (int i = 0; i< c1.getContador(); i++){
             for (int j = 0; j< c2.getContador(); j++){
-                if (c1.conjunto[i] == c2.conjunto[j]){
-                    incluido = true;
+                if (c1.conjunto[i].equals(c2.conjunto[j])){
+                    contador++;
                 }
             }
+        }
+        if (contador == c1.getContador()){
+            incluido = true;
         }
         return incluido;
  }
  public static Conjunto union (Conjunto c1, Conjunto c2){
         int fin_conjunto = c1.getContador()+c2.getContador();
         Conjunto nuevo_conjunto = new Conjunto(fin_conjunto);
-        int contador = 0;
-        for (int i=0; i< c1.getContador(); i++){
-            for (int j = 0; j< c1.getContador(); j++){
-                nuevo_conjunto.conjunto[j] = c1.conjunto[i];
-                contador++;
-            }
-        }
-        for (int i=0; i< c2.getContador(); i++){
-            for (int j=contador; j< fin_conjunto; j++){
-                nuevo_conjunto.conjunto[j] = c2.conjunto[i];
+        nuevo_conjunto.anadir_conjunto(c1);
+        nuevo_conjunto.anadir_conjunto(c2);
+        return nuevo_conjunto;
+ }
+ public static Conjunto interseccion(Conjunto c1, Conjunto c2){
+     Conjunto nuevo_conjunto = new Conjunto();
+        for (int i = 0; i< c1.getContador(); i++){
+            if (c2.pertenece(c1.conjunto[i])){
+                nuevo_conjunto.insertarNum(c1.conjunto[i]);
             }
         }
         return nuevo_conjunto;
  }
+ public static Conjunto diferencia(Conjunto c1, Conjunto c2){
+        Conjunto nuevo_conjunto = new Conjunto();
+     for (int i = 0; i< c1.getContador(); i++){
+         if (!c2.pertenece(c1.conjunto[i])){
+             nuevo_conjunto.insertarNum(c1.conjunto[i]);
+         }
+     }
+        return nuevo_conjunto;
+    }
 }

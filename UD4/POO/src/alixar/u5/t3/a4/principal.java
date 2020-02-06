@@ -24,8 +24,11 @@ public class principal {
         c2.insertarNum(99);
         c2.anadir_conjunto(c1);
         c2.mostrar_conjunto();
-        c2.eliminar_del_conjunto(c1);
-        c2.mostrar_conjunto();
-        System.out.println(Conjunto.union(c1,c2));
+        //c2.eliminar_del_conjunto(c1);
+        //c2.mostrar_conjunto();
+        System.out.println(Conjunto.incluido(c1,c2));
+        Conjunto.union(c1,c2).mostrar_conjunto();
+        Conjunto.interseccion(c1,c2).mostrar_conjunto();
+        Conjunto.diferencia(c1,c2).mostrar_conjunto();
     }
 }

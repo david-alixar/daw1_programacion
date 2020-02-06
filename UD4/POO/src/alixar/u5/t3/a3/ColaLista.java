@@ -1,8 +1,9 @@
 package alixar.u5.t3.a3;
 
 import alixar.u4.t2.a1.Lista;
+import alixar.u5.t3.a6.Cola;
 
-public class ColaLista {
+public class ColaLista implements Cola {
 
     //Atributos
     Lista lista;

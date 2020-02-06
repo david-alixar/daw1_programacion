@@ -1,6 +1,8 @@
 package alixar.u5.t3.a2;
 
-public class ColaTabla {
+import alixar.u5.t3.a6.Cola;
+
+public class ColaTabla implements Cola {
 
     //Atributos
     private Integer [] cola;
