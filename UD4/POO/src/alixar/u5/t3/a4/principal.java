@@ -29,6 +29,6 @@ public class principal {
         System.out.println(Conjunto.incluido(c1,c2));
         Conjunto.union(c1,c2).mostrar_conjunto();
         Conjunto.interseccion(c1,c2).mostrar_conjunto();
-        Conjunto.diferencia(c1,c2).mostrar_conjunto();
+        Conjunto.diferencia(c2,c1).mostrar_conjunto();
     }
 }

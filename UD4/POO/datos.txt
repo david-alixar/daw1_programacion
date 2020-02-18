@@ -1,0 +1,2 @@
+Nombre: Pedro
+Edad: 17
