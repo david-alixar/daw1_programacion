@@ -1,6 +1,8 @@
 package alixar.u6.t2.a9;
 
-public class Maquinistas {
+import java.io.Serializable;
+
+public class Maquinistas implements Serializable {
     // Atributos
     private String nombre;
     private String dni;

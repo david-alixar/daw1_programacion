@@ -4,7 +4,9 @@ import alixar.u6.t2.a9.Locomotoras;
 import alixar.u6.t2.a9.Vagones;
 import alixar.u6.t2.a9.Maquinistas;
 
-public class Trenes {
+import java.io.Serializable;
+
+public class Trenes implements Serializable {
     // Atributos
     private Locomotoras locomotora;
     private Vagones [] vagon = new Vagones [5];

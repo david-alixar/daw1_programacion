@@ -1,8 +1,9 @@
 package alixar.u6.t2.a9;
 
 
+import java.io.Serializable;
 
-public class Locomotoras {
+public class Locomotoras implements Serializable {
     // Atributos
     private String matricula;
     private double potencia;

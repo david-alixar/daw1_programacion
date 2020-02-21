@@ -1,6 +1,8 @@
 package alixar.u6.t2.a9;
 
-    class Vagones {
+import java.io.Serializable;
+
+class Vagones implements Serializable {
     // Atributos
     private double capacidad_max;
     private double capacidad_actual;

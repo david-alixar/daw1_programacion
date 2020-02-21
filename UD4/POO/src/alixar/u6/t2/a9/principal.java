@@ -29,7 +29,7 @@ public class principal {
             System.out.println("¡Error al abrir el fichero!");
         }
 
-        /*
+
         try{
             FileInputStream archivo2 = new FileInputStream(fichero);
             ObjectInputStream in = new ObjectInputStream(archivo2);
@@ -41,7 +41,7 @@ public class principal {
         catch (IOException | ClassNotFoundException e) {
             System.out.println("¡Error al abrir el fichero!");
         }
-        */
+
 
     }
 }
