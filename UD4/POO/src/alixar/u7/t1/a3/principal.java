@@ -4,11 +4,10 @@ import java.util.*;
 
 public class principal {
     public static void main(String[] args) {
-        List<Integer> lista1 = new ArrayList<>();
+        Set<Integer> lista1 = new TreeSet<>( new comparaDecreciente());
 
-        while (lista1.size() < 20) {
-            int num = (int) (Math.random() * 11 + 0);
-            System.out.println(num);
+        for (int i=0; i<=20; i++) {
+            int num = (int) (Math.random() * 101 + 0);
             lista1.add(num);
         }
 

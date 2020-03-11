@@ -9,7 +9,7 @@ public class principal {
     public static void main(String[] args) {
         Set<Integer> lista1 = new TreeSet<>( new comparaDecreciente());
 
-        for (int i = 0; i < 20; i++) {
+        while (lista1.size() < 20) {
             int num = (int) (Math.random() * 101 + 0);
             lista1.add(num);
         }
