@@ -19,10 +19,13 @@ public class principal {
         lista2.add(42);
         lista1.sort(new comparaEnteros());
         lista2.sort(new comparaEnteros());
+        System.out.println(lista1);
+        System.out.println(lista2);
+        System.out.println(ordena(lista1, lista2));
 
     }
 
-    List ordena (List lista1, List lista2){
+    public static List ordena (List lista1, List lista2){
         List<Integer> listaFinal = new ArrayList<Integer>(lista1);
         listaFinal.addAll(lista2);
         listaFinal.sort(new comparaEnteros());
