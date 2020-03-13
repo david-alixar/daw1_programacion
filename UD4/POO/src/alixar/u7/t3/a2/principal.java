@@ -22,7 +22,7 @@ public class principal {
         }
         System.out.println(mapa1);
 
-        System.out.println("introduza un dni (sin letra) para calcular. Si existe se mostrará la clave y el valor");
+        System.out.println("introduza un dni (sin letra) para calcular si existe, en tal caso se mostrará el valor");
         dni = teclado.nextLine();
         System.out.println(mapa1.get(codigo(dni)));
     }

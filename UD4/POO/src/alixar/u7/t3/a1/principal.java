@@ -8,11 +8,11 @@ public class principal {
     public static void main(String [] args) {
         Map<Integer, String>  mapa1 = new HashMap<>();
         Scanner teclado = new Scanner(System.in);
-        String dni = "46221877";
+        String dni = "1";
         String nombre;
 
         while (!dni.equals("0")) {
-            System.out.println("Introduzca un dni (sin letra) y un nombre. Espacio para salir:");
+            System.out.println("Introduzca un dni (sin letra) y un nombre. 0 para salir:");
             dni = teclado.nextLine();
             if(dni.equals("0")){
                 break;
