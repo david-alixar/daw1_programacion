@@ -12,4 +12,12 @@ public class Empleado extends Persona {
         super(dni, nombre, edad, estatura);
         this.sueldo = sueldo;
     }
+
+    //Métodos
+
+    @Override
+    public String toString() {
+        String valor_atributos = "" ;
+        return valor_atributos;
+    }
 }
