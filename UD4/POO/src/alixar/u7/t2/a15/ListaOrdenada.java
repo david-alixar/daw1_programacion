@@ -13,7 +13,7 @@ public class ListaOrdenada<E> extends LinkedList<E> {
 
     void insertarOrdenado(E elemento) {
         if (size() ==0){
-            
+
         }
     }
 }

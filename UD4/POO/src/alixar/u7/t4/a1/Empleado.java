@@ -1,6 +1,9 @@
-package alixar.u7.t4;
+package alixar.u7.t4.a1;
 
-public class Empleado extends Persona {
+
+import java.io.Serializable;
+
+public class Empleado extends Persona implements Serializable {
 
     //Atributos
 
@@ -17,7 +20,9 @@ public class Empleado extends Persona {
 
     @Override
     public String toString() {
-        String valor_atributos = "" ;
+        String valor_atributos = "DNI: " +  dni + " Nombre: " + nombre + " Edad: " + edad + " Estatura: " + estatura + " Sueldo: " + sueldo;
         return valor_atributos;
     }
+
+
 }

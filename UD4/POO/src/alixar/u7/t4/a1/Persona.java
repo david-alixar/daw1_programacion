@@ -1,4 +1,4 @@
-package alixar.u7.t4;
+package alixar.u7.t4.a1;
 
 public class Persona {
 
