@@ -3,7 +3,7 @@ package alixar.u7.t4.a1;
 import alixar.u7.t4.a1.Empleado;
 
 import java.io.*;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ public class principal {
         System.out.println("Seleccione: \n1) para introducir los datos de los empleados  \n2) para cargar el fichero");
         int selector = teclado.nextInt();
         teclado.nextLine();
-        Map<String, Empleado> mapa1 = new HashMap<>();
+        Map<String, Empleado> mapa1 = new LinkedHashMap<>();
         if (selector == 1) {
             System.out.println("Introduzca en este orden: dni, nombre, edad, estatura y sueldo. ");
             String dni = teclado.nextLine();
@@ -37,11 +37,11 @@ public class principal {
                 teclado.nextLine();
             }
         } else if (selector == 2) {
-            carga_empleados(mapa1);
+            mapa1 = carga_empleados(mapa1);
             System.out.println("El fichero empleados se ha cargado correctamente");
         }
 
-        System.out.println("Menú\n Seleccione: 1) Visualizar estado en el mismo orden de introducción\n2) Borrar empleados\n 3) Visualizar empleado\n 4) Modificar empleado\n 5) Insertar empleados\n 6) Salir");
+        System.out.println("Menú\nSeleccione: \n 1) Visualizar estado en el mismo orden de introducción\n 2) Borrar empleados\n 3) Visualizar empleado\n 4) Modificar empleado\n 5) Insertar empleados\n 6) Salir");
         int menu = teclado.nextInt();
         teclado.nextLine();
         while (menu != 6){
@@ -98,11 +98,16 @@ public class principal {
                     menu = teclado.nextInt();
                     teclado.nextLine();
                     break;
+                default:
+                    System.out.println("Opción no válida! Elija otra");
+                    menu = teclado.nextInt();
+                    teclado.nextLine();
+                    break;
             }
         }
 
         System.out.println("Hasta pronto!");
-        //fin(mapa1);
+        fin(mapa1);
 
     }
 

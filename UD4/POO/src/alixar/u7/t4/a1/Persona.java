@@ -1,6 +1,8 @@
 package alixar.u7.t4.a1;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable {
 
     //Atributos
     String dni;
