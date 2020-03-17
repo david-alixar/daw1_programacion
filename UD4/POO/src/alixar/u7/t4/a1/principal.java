@@ -1,7 +1,4 @@
 package alixar.u7.t4.a1;
-
-import alixar.u7.t4.a1.Empleado;
-
 import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
