@@ -43,7 +43,7 @@ public class principal {
                     break;
                 case 2:
                     List<Integer> ids2 = new ArrayList<>();
-                    cargaIds(ids2);
+                    ids2 = cargaIds(ids2);
                     List<Integer> calificaciones = new ArrayList<>();
                     Map<Integer, List> mapaCalificaciones = new LinkedHashMap<>();
                     CalificacionPruebas cf = new CalificacionPruebas();
@@ -67,15 +67,15 @@ public class principal {
                     break;
             case 3:
                 Map<Integer, Aspirante> aspirantes2 = new LinkedHashMap<>();
-                cargaAspirantes(aspirantes2);
+                aspirantes2 = cargaAspirantes(aspirantes2);
                 Map<Integer, List> mapaCalificaciones2 = new LinkedHashMap<>();
-                cargaCalificaciones(mapaCalificaciones2);
+                mapaCalificaciones2 = cargaCalificaciones(mapaCalificaciones2);
                 Set<Aspirante> aprobados = new TreeSet<>(new OrdenaAlfabetico());
                 Aprobados apro = new Aprobados();
                 Iterator iter = mapaCalificaciones2.keySet().iterator();
                 while (iter.hasNext()) {
                     Integer key = (Integer) iter.next();
-                    if(apro.calcularMedia(key,mapaCalificaciones2) >= 5) {
+                    if(apro.calcularMedia(mapaCalificaciones2.get(key)) >= 5) {
                         aprobados.add(aspirantes2.get(key));
                     }
                 }
@@ -111,28 +111,29 @@ public class principal {
             e.printStackTrace();
         }
     }
-    public static void cargaIds (List<Integer> ids) {
+    public static List<Integer> cargaIds (List<Integer> ids) {
         try (ObjectInputStream fichero = new ObjectInputStream(new FileInputStream("ids_aspirantes.dat"))) {
             ids = (List<Integer>) fichero.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+        return ids;
     }
-    public static void cargaAspirantes (Map<Integer, Aspirante> aspirantes2) {
+    public static Map <Integer, Aspirante> cargaAspirantes (Map<Integer, Aspirante> aspirantes2) {
         try (ObjectInputStream fichero = new ObjectInputStream(new FileInputStream("aspirantes.dat"))) {
             aspirantes2 = (Map<Integer, Aspirante>) fichero.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        //return aspirantes2;
+        return aspirantes2;
     }
-    public static void cargaCalificaciones (Map<Integer, List> mapaCalificaciones2) {
+    public static Map <Integer, List> cargaCalificaciones (Map<Integer, List> mapaCalificaciones2) {
         try (ObjectInputStream fichero = new ObjectInputStream(new FileInputStream("calificaciones.dat"))) {
             mapaCalificaciones2 = (Map<Integer, List>) fichero.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        //return mapaCalificaciones2;
+        return mapaCalificaciones2;
     }
     public static void guardarFirchero (Map<Integer, List> mapaCalificaciones) {
         try (ObjectOutputStream fichero =

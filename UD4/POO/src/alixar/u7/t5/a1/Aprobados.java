@@ -11,10 +11,10 @@ public class Aprobados implements Serializable {
     }
 
     //Métodos
-    public double calcularMedia (Integer aspirante, Map calificaciones){
+    public double calcularMedia (List<Integer> calificaciones){
         double media;
         Integer calificacionTotal = 0;
-        List<Integer> lista1 = new ArrayList<Integer>((Integer) calificaciones.get(aspirante));
+        List<Integer> lista1 = new ArrayList<Integer>(calificaciones);
         Iterator it = lista1.iterator();
         while (it.hasNext()) {
             Integer calificacion = (Integer) it.next();
