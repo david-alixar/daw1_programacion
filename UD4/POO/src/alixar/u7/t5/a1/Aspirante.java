@@ -4,6 +4,17 @@ package alixar.u7.t5.a1;
 import java.io.Serializable;
 
 public class Aspirante implements Serializable {
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getMedia() {
+        return media;
+    }
+
+    public void setMedia(double media) {
+        this.media = media;
+    }
 
     //Atributos
     private String nombre;
@@ -22,7 +33,7 @@ public class Aspirante implements Serializable {
     @Override
     public String toString(){
         String datos;
-        datos = nombre + " " + DNI;
+        datos = nombre + "  " + DNI + "         " + media + "\n";
         return datos;
     }
 

@@ -35,8 +35,6 @@ public class principal {
                         telefono = teclado.nextLine();
                     }
                     guardarFircheros(aspirantes, ids);
-                    System.out.println(aspirantes);
-                    System.out.println(ids);
                     System.out.println(frase_menu);
                     menu = teclado.nextInt();
                     teclado.nextLine();
@@ -44,7 +42,6 @@ public class principal {
                 case 2:
                     List<Integer> ids2 = new ArrayList<>();
                     ids2 = cargaIds(ids2);
-                    List<Integer> calificaciones = new ArrayList<>();
                     Map<Integer, List> mapaCalificaciones = new LinkedHashMap<>();
                     CalificacionPruebas cf = new CalificacionPruebas();
                     Iterator it = ids2.iterator();
@@ -52,6 +49,7 @@ public class principal {
                         Object temp = it.next();
                         System.out.println("introduzca calificación para el aspirante " + temp + " (Solo calificaciones enteras. -1 para salir):");
                         int calif = teclado.nextInt();
+                        List<Integer> calificaciones = new ArrayList<>();
                         while (calif != -1) {
                             calificaciones.add(calif);
                             calif = teclado.nextInt();
@@ -75,7 +73,10 @@ public class principal {
                 Iterator iter = mapaCalificaciones2.keySet().iterator();
                 while (iter.hasNext()) {
                     Integer key = (Integer) iter.next();
-                    if(apro.calcularMedia(mapaCalificaciones2.get(key)) >= 5) {
+                    double media = apro.calcularMedia(mapaCalificaciones2.get(key));
+                    if(media >= 5) {
+                        Aspirante temp = aspirantes2.get(key);
+                        temp.setMedia(media);
                         aprobados.add(aspirantes2.get(key));
                     }
                 }
