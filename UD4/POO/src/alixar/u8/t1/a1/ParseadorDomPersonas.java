@@ -1,7 +1,7 @@
 package alixar.u8.t1.a1;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -18,14 +18,40 @@ public class ParseadorDomPersonas {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(new File(nombre));
+            Element root = doc.getDocumentElement();
 
             NodeList nl = root.getChildNodes();
 
             for (int i = 0; i< nl.getLength(); i++){
-                System.out.println("Contenido: " + nl.itenm(i).getNodeType());
+
+                if(nl.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                    Element e = (Element) nl.item(i);
+                    System.out.println("La etiqueta: " + e.getTagName());
+                    System.out.println("Contiene:");
+                    System.out.println(e.getTextContent());
+
+                    if (e.hasAttributes()) {
+                        NamedNodeMap nodeMap = e.getAttributes();
+                        for (int j = 0; j < nodeMap.getLength(); j++) {
+                            Node node = nodeMap.item(j);
+                            Attr atributo = e.getAttributeNode(node.getNodeName());
+                            System.out.println("Atributo: " + atributo.getNodeName());
+                            System.out.println("Valor: " + atributo.getValue());
+                        }
+                    }
+                } else if (nl.item(i).getNodeType() == Node.TEXT_NODE) {
+                    System.out.println("El nodo texto contiene:");
+                    Text texto = (Text) nl.item(i);
+                    System.out.println(texto.getTextContent());
+                } else if (nl.item(i).getNodeType() == Node.COMMENT_NODE) {
+                    System.out.println("El nodo comentario contiene:");
+                    Comment comentario = (Comment) nl.item(i);
+                    System.out.println(comentario.getTextContent());
+                }
+                System.out.println("----------------------------------------");
             }
 
-        } catch (ParserConfigurationException | SAXEception | IOException e) {
+        } catch (ParserConfigurationException | SAXException | IOException e) {
             System.out.println(e.getStackTrace());
         }
     }
