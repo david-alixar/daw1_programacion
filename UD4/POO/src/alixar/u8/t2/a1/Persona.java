@@ -1,21 +1,25 @@
 package alixar.u8.t2.a1;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable {
     private String nombre;
 
     private int edad;
 
     private static int id = 0;
 
+    private int idPersona = 0;
+
     public Persona(String nombre, int edad) {
 
         id++;
 
+        this.idPersona = id;
+
         this.nombre=nombre;
 
         this.edad=edad;
-
-
 
     }
 
@@ -35,8 +39,8 @@ public class Persona {
 
     public int getEdad() {return edad;}
 
-    public static int getId() {
-        return id;
+    public int getIdPersona() {
+        return idPersona;
     }
 
     @Override
