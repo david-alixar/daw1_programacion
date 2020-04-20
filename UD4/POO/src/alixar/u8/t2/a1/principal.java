@@ -1,5 +1,6 @@
 package alixar.u8.t2.a1;
 
+import alixar.u8.t1.a1.ParseadorDomPersonas;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
@@ -46,7 +47,6 @@ public class principal {
             Iterator it = listaPersonas2.iterator();
             while (it.hasNext()) {
                 Persona p1 = (Persona) it.next();
-                System.out.println(p1);
 
 
 
@@ -88,7 +88,8 @@ public class principal {
                 }
 
 
-        System.out.println(listaPersonas2);
+        ParseadorDomPersonas p1 = new ParseadorDomPersonas();
+        p1.parse("personasXML.xml");
     }
     public static void escribe (List<Persona> listaPersonas){
         try (ObjectOutputStream fichero =
