@@ -55,7 +55,7 @@ public class RecorridoDom {
         }
     }
 
-    public static void numHijos( String nombre) {
+    public static void numNodosHijos( String nombre) {
 
         try {
 
@@ -72,32 +72,29 @@ public class RecorridoDom {
 
                 if (nl.item(i).getNodeType() == Node.ELEMENT_NODE) {
                     Element e = (Element) nl.item(i);
-//                    System.out.println("La etiqueta: " + e.getTagName());
-//                    System.out.println("Contiene:");
-//                    System.out.println(e.getTextContent());
-//
-//                    if (e.hasAttributes()) {
-//                        NamedNodeMap nodeMap = e.getAttributes();
-//                        for (int j = 0; j < nodeMap.getLength(); j++) {
-//                            Node node = nodeMap.item(j);
-//                            Attr atributo = e.getAttributeNode(node.getNodeName());
-//                            System.out.println("Atributo: " + atributo.getNodeName());
-//                            System.out.println("Valor: " + atributo.getValue());
-//                        }
-//                    }
-                } else if (nl.item(i).getNodeType() == Node.TEXT_NODE) {
-                    System.out.println("Es un nodo texto");
-                } else if (nl.item(i).getNodeType() == Node.COMMENT_NODE) {
-                    System.out.println("Es un nodo comentario");
 
-                }
+                    if (e.hasAttributes()) {
+                        NamedNodeMap nodeMap = e.getAttributes();
+                        for (int j = 0; j < nodeMap.getLength(); j++) {
+                            Node node = nodeMap.item(j);
+                            Attr atributo = e.getAttributeNode(node.getNodeName());
+                            System.out.println("Atributo: " + atributo.getNodeName());
+                            System.out.println("Valor: " + atributo.getValue());
+                        }
+                    }
+                } else if (nl.item(i).getNodeType() == Node.TEXT_NODE) {
+                    System.out.println("Es un nodo texto\n");
+                } else if (nl.item(i).getNodeType() == Node.COMMENT_NODE) {
+                    System.out.println("Es un nodo comentario\n");
+
+               }
             }
 
         } catch (ParserConfigurationException | SAXException | IOException e) {
             System.out.println(e.getStackTrace());
         }
     }
-    public static void elemento( String nombre, String Elemento) {
+    public static void mostrarContenidoEtiqueta( String nombre, String Elemento) {
 
         try {
 
@@ -137,6 +134,45 @@ public class RecorridoDom {
             if (!existe){
                 System.out.println("El atributo introducido no se corresponde con ningún nodo.");
             }
+
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            System.out.println(e.getStackTrace());
+        }
+    }
+    public static void mostrarXMLDOM( String nombre) {
+
+        try {
+
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            Document doc = db.parse(new File(nombre));
+            Element root = doc.getDocumentElement();
+
+            NodeList nl = root.getChildNodes();
+
+            for (int i = 0; i < nl.getLength(); i++) {
+
+                if (nl.item(i).getNodeType() == Node.ELEMENT_NODE) {
+                    Element e = (Element) nl.item(i);
+                   System.out.println("La etiqueta: " + e.getTagName());
+                   System.out.println("Contiene el siguiente atributo:");
+
+
+                    if (e.hasAttributes()) {
+                        NamedNodeMap nodeMap = e.getAttributes();
+                        for (int j = 0; j < nodeMap.getLength(); j++) {
+                            Node node = nodeMap.item(j);
+                            Attr atributo = e.getAttributeNode(node.getNodeName());
+                            System.out.println("Atributo: " + atributo.getNodeName());
+                            System.out.println("Valor: " + atributo.getValue());
+                        }
+                    }
+                }
+                System.out.println("----------------------------------------");
+
+            }
+            System.out.println("Recorro con DOM:\n------------------------");
+            parse(nombre);
 
         } catch (ParserConfigurationException | SAXException | IOException e) {
             System.out.println(e.getStackTrace());

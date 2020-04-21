@@ -91,8 +91,20 @@ public class principal {
         }
 
         RecorridoDom r1 = new RecorridoDom();
-        //r1.numHijos(nombreFichero);
-        //r1.parse(nombreFichero);
-        r1.elemento(nombreFichero, "9");
+
+        System.out.println("Número de hijos y tipo de nodos:\n------------------------");
+        r1.numNodosHijos(nombreFichero);
+        System.out.println("Recorro hasta el primer nivel y luego cargo el archivo completo");
+        r1.mostrarXMLDOM(nombreFichero);
+        String buscaNodo = ("7");
+        System.out.println("\n\n\n------------------------\nBusco un nodo concreto: " + buscaNodo+ ":\n------------------------");
+        r1.mostrarContenidoEtiqueta(nombreFichero, "7");
+        buscaNodo = "9";
+        System.out.println("\n\n\n------------------------\nBusco un nodo concreto: " + buscaNodo+ ":\n------------------------");
+        r1.mostrarContenidoEtiqueta(nombreFichero, "9");
+
+        System.out.println("\n\n\nRecorro con SAX\n------------------------");
+        RecorridoSax r2 = new RecorridoSax();
+        r2.parse(nombreFichero);
     }
 }
