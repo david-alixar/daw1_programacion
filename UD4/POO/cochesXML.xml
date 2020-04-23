@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coches>
+    <coche id="1">
+        <marca>Opel</marca>
+        <modelo>Corsa</modelo>
+        <combustible>gasolina</combustible>
+        <cilindrada>1.2</cilindrada>
+        <año>2001</año>
+    </coche>
+    <coche id="2">
+        <marca>Ford</marca>
+        <modelo>Focus</modelo>
+        <combustible>diésel</combustible>
+        <cilindrada>1.6</cilindrada>
+        <año>2007</año>
+    </coche>
+    <coche id="3">
+        <marca>Citroën</marca>
+        <modelo>Xsara</modelo>
+        <combustible>diésel</combustible>
+        <cilindrada>2.0</cilindrada>
+        <año>2003</año>
+    </coche>
+    <coche id="4">
+        <marca>Peugeot</marca>
+        <modelo>308</modelo>
+        <combustible>gasolina</combustible>
+        <cilindrada>1.2</cilindrada>
+        <año>2019</año>
+    </coche>
+    <coche id="5">
+        <marca>Renault</marca>
+        <modelo>Clio</modelo>
+        <combustible>gasolina</combustible>
+        <cilindrada>1.2</cilindrada>
+        <año>2000</año>
+    </coche>
+    <coche id="6">
+        <marca>Ford</marca>
+        <modelo>Fiesta</modelo>
+        <combustible>diésel</combustible>
+        <cilindrada>1.6</cilindrada>
+        <año>2009</año>
+    </coche>
+    <coche id="7">
+        <marca>Kia</marca>
+        <modelo>Ceed</modelo>
+        <combustible>diésel</combustible>
+        <cilindrada>1.6</cilindrada>
+        <año>2019</año>
+    </coche>
+</coches>
