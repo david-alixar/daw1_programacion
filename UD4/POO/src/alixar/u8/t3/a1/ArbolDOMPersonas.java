@@ -69,6 +69,7 @@ public class ArbolDOMPersonas {
     }
     public void incrementoEdad(Persona p1) {
         boolean esta = false;
+        boolean cambia = false;
         try {
 
             Element root = documento.getDocumentElement();
@@ -84,33 +85,21 @@ public class ArbolDOMPersonas {
                     for (int j = 0; j < nh.getLength(); j++){
                         if (nh.item(j).getNodeType() == Node.ELEMENT_NODE) {
                             Element e2 = (Element) nh.item(j);
-                            if (e2.getTextContent().equals(p1.getNombre())) {
-                                //Element e3 = (Element) nh.item(j+1);
+                            if (cambia){
                                 e2.setTextContent(Integer.toString(p1.getEdad()));
+                                cambia = false;
+                            }
+                            if (e2.getTextContent().equals(p1.getNombre())) {
                                 esta = true;
+                                cambia = true;
                             }
                         }
                     }
 
                     if (e.hasAttributes()) {
                         NamedNodeMap nodeMap = e.getAttributes();
-                        for (int k = 0; k < nodeMap.getLength(); k++) {
-                            Node node = nodeMap.item(k);
-                            Attr atributo = e.getAttributeNode(node.getNodeName());
-                            //System.out.println("Atributo: " + atributo.getNodeName());
-                            //System.out.println("Valor: " + atributo.getValue());
-                        }
                     }
-                } else if (nl.item(i).getNodeType() == Node.TEXT_NODE) {
-//                    System.out.println("El nodo texto contiene:");
-//                    Text texto = (Text) nl.item(i);
-//                    System.out.println(texto.getTextContent());
-                } else if (nl.item(i).getNodeType() == Node.COMMENT_NODE) {
-//                    System.out.println("El nodo comentario contiene:");
-//                    Comment comentario = (Comment) nl.item(i);
-//                    System.out.println(comentario.getTextContent());
                 }
-
             }
 
             TransformerFactory tf = TransformerFactory.newInstance();
@@ -126,16 +115,17 @@ public class ArbolDOMPersonas {
 
             File nuevoPersonas = new File("personas.xml");
             StreamResult destino = new StreamResult(nuevoPersonas);
+            transformer.transform(origenDOM, destino);
         } catch (TransformerConfigurationException e) {
             System.out.println(e.getStackTrace());
         } catch (TransformerException e) {
             e.printStackTrace();
         }
         if (!esta){
-            System.out.println("No lo he encontrado");
+            System.out.println("No he encontrado a: " + p1.getNombre());
         }
         else {
-            System.out.println(esta);
+            System.out.println("He actualizado la edad de: " + p1.getNombre() + " a: " + p1.getEdad());
         }
     }
 }
