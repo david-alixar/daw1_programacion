@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<asignaturas>
+    <persona id="1">
+        <nombre>Manuel</nombre>
+        <dni>51236945m</dni>
+        <telefono>955331964</telefono>
+        <dni>66</dni>
+    </persona>
+    <persona id="2">
+        <nombre>Lola</nombre>
+        <dni>41236385l</dni>
+        <telefono>954331964</telefono>
+        <dni>36</dni>
+    </persona>
+    <persona id="3">
+        <nombre>Roberto</nombre>
+        <dni>89236940k</dni>
+        <telefono>902202122</telefono>
+        <dni>22</dni>
+    </persona>
+    <persona id="4">
+        <nombre>Rocío</nombre>
+        <dni>98765432a</dni>
+        <telefono>621325327</telefono>
+        <dni>35</dni>
+    </persona>
+    <persona id="5">
+        <nombre>Juan</nombre>
+        <dni>932124487j</dni>
+        <telefono>627484328</telefono>
+        <dni>46</dni>
+    </persona>
+    <persona id="6">
+        <nombre>Victoria</nombre>
+        <dni>62358723v</dni>
+        <telefono>611626362</telefono>
+        <dni>22</dni>
+    </persona>
+    <persona id="7">
+        <nombre>Lolo</nombre>
+        <dni>01236432l</dni>
+        <telefono>611403612</telefono>
+        <dni>59</dni>
+    </persona>
+    <persona id="8">
+        <nombre>Eulalia</nombre>
+        <dni>61245941e</dni>
+        <telefono>956304112</telefono>
+        <dni>61</dni>
+    </persona>
+    <persona id="9">
+        <nombre>Román</nombre>
+        <dni>62145984r</dni>
+        <telefono>666401261</telefono>
+        <dni>42</dni>
+    </persona>
+    <persona id="10">
+        <nombre>Rosa</nombre>
+        <dni>41236548s</dni>
+        <telefono>954476138</telefono>
+        <dni>87</dni>
+    </persona>
+</asignaturas>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personas>
+       
+    
+    <!--COMENTARIO AÑADIDO DESDE DOM -->
+    <persona id="1">
+                
+        
+        <nombre>Pepe</nombre>
+               
+        
+        <edad>51</edad>
+            
+    
+    </persona>
+     
+    
+    <persona id="2">
+                
+        
+        <nombre>Manoli</nombre>
+               
+        
+        <edad>27</edad>
+                
+    
+    </persona>
+            
+    
+    <persona id="3">
+                        
+        
+        <nombre>Juan</nombre>
+                       
+        
+        <edad>66</edad>
+                   
+    
+    </persona>
+       
+
+    <persona id="4">
+        <nombre>Chema Durán</nombre>
+        <edad>25</edad>
+    </persona>
+</personas>
