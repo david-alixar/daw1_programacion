@@ -2,19 +2,14 @@
 <personas>
        
     
-    <!--COMENTARIO AÑADIDO DESDE DOM -->
-    <persona id="1">
-                
-        
-        <nombre>Pepe</nombre>
-               
-        
-        <edad>51</edad>
-            
-    
+    <!--COMENTARIO AÑADIDO DESDE DOM-->
+    <persona id="5">
+        <nombre>Ramón</nombre>
+        <edad>35</edad>
     </persona>
      
     
+    <!--COMENTARIO AÑADIDO DESDE DOM-->
     <persona id="2">
                 
         
@@ -27,6 +22,7 @@
     </persona>
             
     
+    <!--COMENTARIO AÑADIDO DESDE DOM-->
     <persona id="3">
                         
         
@@ -39,6 +35,7 @@
     </persona>
        
 
+    <!--COMENTARIO AÑADIDO DESDE DOM-->
     <persona id="4">
         <nombre>Chema Durán</nombre>
         <edad>25</edad>

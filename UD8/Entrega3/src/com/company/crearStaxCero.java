@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-public class EscrituraXMLStax {
+public class crearStaxCero {
     public static void main(String[] args) {
 
         ArrayList<Persona> personas = new ArrayList<>();
@@ -38,74 +38,53 @@ public class EscrituraXMLStax {
 
         try {
 
-            //Creo el objeto que me va a servir para escribir
             XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newInstance();
             XMLEventWriter xmlWriter = xmlOutputFactory.createXMLEventWriter(new FileOutputStream("STAX.xml"));
 
-            //Creo el objeto que me va a servir para crear los eventos
             XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 
-            //Creo el evento de principio de documento y lo escribo con el objeto escritor
             StartDocument startDocument = eventFactory.createStartDocument();
             xmlWriter.add(startDocument);
 
-            //Creo el evento para introducir el salto de línea y el de salto de línea con tabulador
-            //Los usaré para maquetar el fichero correctamente (aunque no son estrictamente necesarios)
             Characters saltoDeLinea = eventFactory.createCharacters("\n");
             Characters saltoDeLineaTab = eventFactory.createCharacters("\n\t");
             Characters tabulador = eventFactory.createCharacters("\t");
             xmlWriter.add(saltoDeLinea);
 
-
-
-            //Creo el evento necesario para crear la etiqueta raíz pedidos
             StartElement pedidosStartElement = eventFactory.createStartElement("","","personas");
             xmlWriter.add(pedidosStartElement);
             xmlWriter.add(saltoDeLineaTab);
 
-            //Recorro pedidos y voy creando las etiquetas (eventos) necesarias para cada uno de elllas
-
-            //Esta variable la creo para controlar si es el último de los pedidos ya que querré diferente salida
             int longitud = 0;
 
             for (Persona p : personas) {
 
-                //Creo todas las etiquetas de apertura  que va a tener cada uno de los pedidos
                 StartElement personaStart = eventFactory.createStartElement("","","persona");
                 StartElement nombreStart = eventFactory.createStartElement("","","nombre");
                 StartElement dniStart = eventFactory.createStartElement("","","dni");
                 StartElement telefonoStart = eventFactory.createStartElement("","","telefono");
                 StartElement edadStart = eventFactory.createStartElement("","","edad");
 
-
-                //Creo el atribudo id
                 Attribute id = eventFactory.createAttribute("id",Integer.toString(p.getIdPersona()));
 
-
-                //Creo todas las etiquetas de cierre que va a tener cada uno de los pedidos
                 EndElement personaEnd = eventFactory.createEndElement("","","persona");
                 EndElement nombreEnd = eventFactory.createEndElement("","","nombre");
                 EndElement dniEnd = eventFactory.createEndElement("","","dni");
                 EndElement telefonoEnd = eventFactory.createEndElement("","","telefono");
                 EndElement edadEnd = eventFactory.createEndElement("","","edad");
 
-                //Creo los contenidos
                 Characters nombre = eventFactory.createCharacters(p.getNombre());
                 Characters dni  = eventFactory.createCharacters(p.getDni());
                 Characters telefono = eventFactory.createCharacters(Integer.toString(p.getTelefono()));
                 Characters edad = eventFactory.createCharacters(Integer.toString(p.getEdad()));
 
-
-                //Añado todos los elementos correspondientes a un pedido en el orden que es necesario
                 xmlWriter.add(personaStart);
 
-                //Añado el atributo
                 xmlWriter.add(id);
 
                 xmlWriter.add(saltoDeLineaTab);
                 xmlWriter.add(tabulador);
 
-                //Lo hijos de cada pedido
                 xmlWriter.add(nombreStart);
                 xmlWriter.add(nombre);
                 xmlWriter.add(nombreEnd);
@@ -126,10 +105,8 @@ public class EscrituraXMLStax {
                 xmlWriter.add(edadEnd);
                 xmlWriter.add(saltoDeLineaTab);
 
-                //Cierro el pedido que estoy escribiendo
                 xmlWriter.add(personaEnd);
 
-                //En el último quiero un tratamiendo diferente
                 if (longitud == personas.size() - 1) {
                     xmlWriter.add(saltoDeLinea);
                 } else {
@@ -139,16 +116,10 @@ public class EscrituraXMLStax {
 
             }
 
-
-
-            //Creo el evento necesario para cerrar la etiqueta raíz pedidos
             EndElement pedidosEndElement = eventFactory.createEndElement("","","personas");
             xmlWriter.add(pedidosEndElement);
             xmlWriter.add(saltoDeLinea);
 
-
-
-            //Creo el evento de finalización del documento y lo escribo con el objeto escritor
             EndDocument endDocument = eventFactory.createEndDocument();
             xmlWriter.add(endDocument);
 

@@ -67,7 +67,7 @@ public class DomDesdeCero {
                     Element telefono = doc.createElement("telefono");
                     telefono.setTextContent((Integer.toString(p.getTelefono())));
 
-                    Element edad = doc.createElement("dni");
+                    Element edad = doc.createElement("edad");
                     edad.setTextContent((Integer.toString(p.getEdad())));
 
                     progTag.appendChild(nombre);

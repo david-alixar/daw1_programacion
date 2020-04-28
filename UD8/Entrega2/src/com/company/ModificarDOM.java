@@ -26,13 +26,6 @@ public class ModificarDOM {
 
             Text saltoLinea = doc.createTextNode("\n");
 
-            Comment comentario = doc.createComment("COMENTARIO AÑADIDO DESDE DOM ");
-
-            Element primeraPersona = (Element) doc.getElementsByTagName("persona").item(0);
-
-            root.insertBefore(comentario,primeraPersona);
-
-
             Element persona = doc.createElement("persona");
             persona.setAttribute("id","4");
 
@@ -48,29 +41,33 @@ public class ModificarDOM {
 
             root.appendChild(persona);
 
-//            // 3- Uso de cloneNode
-//            //Clonamos el último nodo pero posteriormente modificamos el atributo
-//            NodeList nl = doc.getElementsByTagName("persona");
-//            Node node = nl.item(nl.getLength()-1);
-//            Element personaClonada = (Element) node.cloneNode(true);
-//
-//            //Cambio el atributo
-//            personaClonada.setAttribute("id","5");
-//
-//            //Añadimos ese nuevo no al root
-//            root.appendChild(personaClonada);
-//
-//            // 4- uso de removeChild()
-//            // Borramos el segundo nodo
-//            Element segundaPersona = (Element) doc.getElementsByTagName("persona").item(1);
-//            root.removeChild(segundaPersona);
-//
-//            // 5- Uso de replaceChild()
-//            // Voy a reemplazar la primera persona por la última
-//            //Podría ser otro elemento que he creado pero aprovecho uno que está en el árbol
-//            // y puedo ver como me quedo con 3 nodos.
-//            root.replaceChild(personaClonada,primeraPersona);
+            Element persona2 = doc.createElement("persona");
+            persona2.setAttribute("id","5");
 
+            Element nombre2 = doc.createElement("nombre");
+            nombre2.setTextContent("Ramón");
+
+            Element edad2 = doc.createElement("edad");
+            edad2.setTextContent("35");
+
+            persona2.appendChild(nombre2);
+
+            persona2.appendChild(edad2);
+
+            Element primeraPersona = (Element) doc.getElementsByTagName("persona").item(0);
+
+            root.replaceChild(persona2,primeraPersona);
+
+            int i = 0;
+
+            while(i != doc.getElementsByTagName("persona").getLength()) {
+
+                Comment comentario = doc.createComment("COMENTARIO AÑADIDO DESDE DOM");
+
+                root.insertBefore(comentario, doc.getElementsByTagName("persona").item(i));
+
+                i++;
+            }
 
             TransformerFactory tf = TransformerFactory.newInstance();
             Transformer transformer = tf.newTransformer();
