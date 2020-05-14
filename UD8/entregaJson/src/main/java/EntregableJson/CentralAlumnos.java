@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface CentralAlumnos {
 
-    @GET("/alumnos?_embed=asignaturas")
+    //https://my-json-server.typicode.com/chemaduran/json_entrega1/alumnos?_embed=asignaturas
+    @GET("alumnos?_embed=asignaturas")
     Call<List<Alumnos>> listAlumnos();
 }
