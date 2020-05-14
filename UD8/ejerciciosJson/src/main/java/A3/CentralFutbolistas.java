@@ -8,6 +8,6 @@ import java.util.List;
 public interface CentralFutbolistas {
 
     // https://my-json-server.typicode.com/chemaduran/futbolistas_api_demo/json_api_dem/futbolistas
-    @GET("json_api_demo/futbolistas")
+    @GET("jugadores")
     Call<List<Futbolista>> listFutbolistas();
 }

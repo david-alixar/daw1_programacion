@@ -12,6 +12,7 @@ public class principal {
     //
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://my-json-server.typicode.com/chemaduran/futbolistas_api_demo/")
+            //.baseUrl("https://my-json-server.typicode.com/chemaduran/futbolistas_api_demo/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 

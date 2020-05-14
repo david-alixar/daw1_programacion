@@ -1,6 +1,5 @@
 package A3;
 
-import java.util.List;
 import java.util.Map;
 
 public class Futbolista {
@@ -52,7 +51,8 @@ public class Futbolista {
     @Override
     public String toString() {
         return "Futbolista{" +
-                "nombre='" + nombre + '\'' +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
                 ", equipo='" + equipo + '\'' +
                 ", estadisticas=" + estadisticas +
                 '}';
