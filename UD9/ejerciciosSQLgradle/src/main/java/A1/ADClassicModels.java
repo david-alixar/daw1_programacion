@@ -1,18 +1,25 @@
 package A1;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ADClassicModels {
 
-    private List empleados;
-    private List oficinas;
+    private List<Employee> empleados = new ArrayList<Employee>();
+    private List<Office> oficinas = new ArrayList<Office>();
+
+    private static Connection connection = null;
+
+    public static Connection getConnection() {
+        return connection;
+    }
 
     public List<Employee> getEmpleados(){
-        Connection connection = null;
+
 
         try {
-
+            connection = null;
             connection = ConexionDB.getConnection();
 
             //Creo el objeto para ejecutar la sentencias SQL
@@ -23,7 +30,7 @@ public class ADClassicModels {
 
             //Ejecuta una consulta de sencilla de búsqueda
             //El resultado se almacena en el ResultSet (conjunto de resultados)
-            ResultSet rs = statement.executeQuery("select * from employees");
+            ResultSet rs = statement.executeQuery("SELECT * FROM employees");
 
             //Recorremos el conjunto de resultados
             while (rs.next()) {
@@ -38,7 +45,32 @@ public class ADClassicModels {
     }
 
     public List<Office> getOffices(){
+        //Connection connection = null;
 
+        try {
+            connection = null;
+            connection = ConexionDB.getConnection();
+
+            //Creo el objeto para ejecutar la sentencias SQL
+            Statement statement = connection.createStatement();
+
+            //Establezco un tiempo máximo de respuesta
+            statement.setQueryTimeout(30);
+
+            //Ejecuta una consulta de sencilla de búsqueda
+            //El resultado se almacena en el ResultSet (conjunto de resultados)
+            ResultSet rs = statement.executeQuery("SELECT * FROM offices");
+
+            //Recorremos el conjunto de resultados
+            while (rs.next()) {
+                Office of1 = new Office(rs.getString("officeCode"),rs.getString("city"), rs.getString("phone"),rs.getString("addressLine1"),rs.getString("addressLine2"),rs.getString("state"),rs.getString("country"), rs.getString("postalCode"), rs.getString("territory"));
+                oficinas.add(of1);
+            }
+
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
         return oficinas;
     }
 }

@@ -22,7 +22,7 @@ public class SimpleQuery {
 
             //Ejecuta una consulta de sencilla de búsqueda
             //El resultado se almacena en el ResultSet (conjunto de resultados)
-            ResultSet rs = statement.executeQuery("select * from customers");
+            ResultSet rs = statement.executeQuery("select * from employees");
 
             //Recorremos el conjunto de resultados
             while (rs.next()) {

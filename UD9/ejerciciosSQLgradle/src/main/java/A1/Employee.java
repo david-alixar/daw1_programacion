@@ -22,4 +22,18 @@ public class Employee {
         this.reportsTo = reportsTo;
         this.jobTitle = jobTitle;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeNumber=" + employeeNumber +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", extension='" + extension + '\'' +
+                ", email='" + email + '\'' +
+                ", officeCode='" + officeCode + '\'' +
+                ", reportsTo=" + reportsTo +
+                ", jobTitle='" + jobTitle + '\'' +
+                '}';
+    }
 }
