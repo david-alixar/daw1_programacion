@@ -1,4 +1,4 @@
-package A1;
+package com.company;
 
 import java.sql.*;
 
@@ -12,7 +12,7 @@ public class SimpleQuery {
             // La paso el nombre de la base de datos classimodels
             // El usuario de la base de datos user=usuario
             // La contraseña password=usuario
-            connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3336/classicmodels?user=root&password=123456");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/classicmodels?user=usuario&password=usuario");
 
             //Creo el objeto para ejecutar la sentencias SQL
             Statement statement = connection.createStatement();
@@ -46,7 +46,6 @@ public class SimpleQuery {
                 System.out.println(e.getMessage());
             }
         }
-
+    }
 
     }
-}
