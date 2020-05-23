@@ -9,17 +9,13 @@ public class ADClassicModels {
     private List<Employee> empleados = new ArrayList<Employee>();
     private List<Office> oficinas = new ArrayList<Office>();
 
-    private static Connection connection = null;
+    private Connection connection = null;
 
-    public static Connection getConnection() {
-        return connection;
-    }
 
     public List<Employee> getEmpleados(){
 
 
         try {
-            connection = null;
             connection = ConexionDB.getConnection();
 
             //Creo el objeto para ejecutar la sentencias SQL
@@ -48,7 +44,6 @@ public class ADClassicModels {
         //Connection connection = null;
 
         try {
-            connection = null;
             connection = ConexionDB.getConnection();
 
             //Creo el objeto para ejecutar la sentencias SQL

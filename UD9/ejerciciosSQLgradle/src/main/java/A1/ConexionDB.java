@@ -23,10 +23,9 @@ public class ConexionDB {
     }
 
     public static void close(){
-        Connection connection = ADClassicModels.getConnection();
         try {
-            if (connection != null) {
-                connection.close();
+            if (con != null) {
+                con.close();
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
